@@ -51,11 +51,11 @@ canvas {
 }
 
 #message-input {
-    margin: 70vh;
+    margin-top: 65vh;
 }
 
 textarea[name="message"] {
-    width: 75vw;
+    width: 80vw;
     padding: 10px;
     border: 3px solid #cdb81b;
     border-radius: 5px;
@@ -68,4 +68,35 @@ textarea[name="message"] {
 textarea[name="message"]:focus {
     outline: none;
     border-color: #1b7acd;
+}
+
+textarea[name="message"]::placeholder {
+    font-weight: 500;
+}
+
+.footer {
+    font-weight: 500;
+    z-index: 999;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    position: absolute;
+    margin-top: 90vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+.footer a {
+    color: #cdb81b;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: #1b7acd;
+    font-weight: 700;
+}
+
+.footer span {
+    font-weight: 800;
 }

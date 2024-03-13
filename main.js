@@ -15,7 +15,7 @@ gltfLoader.load(
     './images/duck/scene.gltf',
     function (gltf) {
         object = gltf.scene;
-        //object.position.set(-50, -.7, 0);
+        object.position.set(0, .4, 0);
         object.scale.set(30, 30, 30);
         //object.rotateX(90);
         scene.add(object);
