@@ -34,7 +34,7 @@ canvas {
 
 #credits a:first-of-type:hover {
     color: #1b7acd;
-    text-decoration: underline;
+    font-weight: 700;
 }
 
 #credits a:last-of-type {
@@ -43,7 +43,7 @@ canvas {
 
 #credits a:last-of-type:hover {
     color: #1b7acd;
-    text-decoration: underline;
+    font-weight: 700;
 }
 
 .message-container {
