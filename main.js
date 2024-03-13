@@ -15,18 +15,10 @@ gltfLoader.load(
     './images/duck/scene.gltf',
     function (gltf) {
         object = gltf.scene;
-        object.position.set(0, .4, 0);
+        object.position.set(-5, .4, 0);
         object.scale.set(30, 30, 30);
-        //object.rotateX(90);
+        //object.rotation.y = Math.PI / 2;
         scene.add(object);
-        /*
-        mixer = new THREE.AnimationMixer(object);
-        const clips = gltf.animations;
-        clips.forEach(function(clip) {
-            const action = mixer.clipAction(clip);
-            action.play();
-        })
-        */
     },
     function (xhr) {
         console.log((xhr.loaded / xhr.total*100) + '% loaded');
@@ -41,6 +33,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('canvas-container').appendChild(renderer.domElement);
 
 camera.position.z = 5;
+camera.position.x = -5;
 
 const topLight = new THREE.DirectionalLight(0xFFFFFF, 5);
 scene.add(topLight);
@@ -53,8 +46,8 @@ scene.add(bottomLight);
 
 function animate() {
     requestAnimationFrame(animate);
-    object.rotation.y = -3 + mouseX / window.innerWidth * 3;
-    object.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
+    object.rotation.y = -1.5 + mouseX / window.innerWidth * 3;
+    object.rotation.x = -1 + mouseY * 2.5 / window.innerHeight;
     renderer.render(scene, camera);
 }
 

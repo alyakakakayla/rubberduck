@@ -55,7 +55,7 @@ canvas {
 }
 
 textarea[name="message"] {
-    width: 80vw;
+    width: 50vw;
     padding: 10px;
     border: 3px solid #cdb81b;
     border-radius: 5px;
@@ -99,4 +99,10 @@ textarea[name="message"]::placeholder {
 
 .footer span {
     font-weight: 800;
+}
+
+@media (max-width: 768px) {
+    textarea[name="message"] {
+        width: 80vw;
+    }
 }
